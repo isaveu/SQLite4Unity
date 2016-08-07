@@ -11,5 +11,4 @@ sqlite3.dll download from http://www.sqlite.org/download.html
      Talbe 	  |  Size  | Record Number | Search Time
 --------------|--------|---------------|------------
 Phone 		  |  16.2M |    300105     |  0.01026s
---------------|--------|---------------|------------
 identitycard  |  264KB |     6336      |  0.00071s
