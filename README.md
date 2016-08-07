@@ -1,5 +1,5 @@
-# sqlite4unity
-sqlite3 for unity
+# SQLite4Unity
+SQLite3 for unity
 
 
 Mono.Data.Sqlite.dll
@@ -21,7 +21,7 @@ read vs:
 
 read method |  Size  | Record Number| Load Time |Search Time
 ------------|--------|--------------|-----------|------------
-Sqlite3	    | 16.2M  |	300105		| 0.0401926s|0.04498291s
+SQLite3	    | 16.2M  |	300105		| 0.0401926s|0.04498291s
 StreamReader| 16.2M  |	300105		| 1.906061s	|0.09459782s
 
 
