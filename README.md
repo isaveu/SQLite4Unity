@@ -7,6 +7,8 @@ System.Data.dll you can find from "Unity\Editor\Data\MonoBleedingEdge\lib\mono\2
 
 sqlite3.dll download from http://www.sqlite.org/download.html
 
+test.db size=32.8M, load time=0.0401926s
+
 
      Talbe 	  |  Size  | Record Number | Search Time
 --------------|--------|---------------|------------
