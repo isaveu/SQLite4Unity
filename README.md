@@ -23,3 +23,6 @@ read method |  Size  | Record Number| Load Time |Search Time
 ------------|--------|--------------|-----------|------------
 Sqlite3	    | 16.2M  |	300105		| 0.0401926s|0.04498291s
 StreamReader| 16.2M  |	300105		| 1.906061s	|0.09459782s
+
+
+![](https://github.com/tomtc123/GitHub-Resources/blob/master/SQLite4Unity/20160807214131.png)
