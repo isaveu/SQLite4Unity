@@ -34,7 +34,7 @@ public class Test : MonoBehaviour
             string number = GetSearchNumber(7);
             if (!string.IsNullOrEmpty(number))
             {
-                PhoneInfo phoneinfo = TableManager.Instance.GetTableData<PhoneInfo>(eTableName.phonenumber, number);
+                PhoneInfo phoneinfo = TableManager.Instance.GetTableData<PhoneInfo>(eTableName.phone, number);
                 text.text = string.Format("{0} {1}", phoneinfo.MobileArea, phoneinfo.MobileType);
             }
 
