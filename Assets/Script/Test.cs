@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
-
+using System.IO;
 
 public class PhoneInfo
 {
@@ -25,6 +26,7 @@ public class Test : MonoBehaviour
     public Dropdown dropdown;
 
     private int mIndex = 0;
+    private Dictionary<string, string[]> mDict = null;
 
     public void ClickButton()
     {
@@ -64,6 +66,39 @@ public class Test : MonoBehaviour
             return string.Empty;
         }
         return number;
+    }
+
+    public void OnClickTestStreamReader()
+    {
+        float time = Time.realtimeSinceStartup;
+        if (mDict == null)
+        {
+            string path = Application.dataPath + "/phone.csv";
+            StreamReader sr = new StreamReader(path);
+            string line = string.Empty;
+            mDict = new Dictionary<string, string[]>();
+            while ((line = sr.ReadLine()) != null)
+            {
+                if (!string.IsNullOrEmpty(line))
+                {
+                    string[] str = line.Split(',');
+                    mDict.Add(str[1].Trim(), str);
+                }
+            }
+            sr.Close();
+            Debug.LogFormat("read time={0}s", Time.realtimeSinceStartup - time);
+        }
+        time = Time.realtimeSinceStartup;
+        string number = GetSearchNumber(7);
+        foreach(var item in mDict)
+        {
+            if (item.Key == number)
+            {
+                text.text = string.Format("{0} {1}", item.Value[2], item.Value[3]);
+                break;
+            }
+        }
+        Debug.LogFormat("search time={0}s", Time.realtimeSinceStartup - time);
     }
 
 }

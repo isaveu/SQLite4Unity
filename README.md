@@ -9,8 +9,17 @@ sqlite3.dll download from http://www.sqlite.org/download.html
 
 test.db size=32.8M, load time=0.0401926s
 
+table vs:
 
-     Talbe 	  |  Size  | Record Number | Search Time
+     Table 	  |  Size  | Record Number | Search Time
 --------------|--------|---------------|------------
 Phone 		  |  16.2M |    300105     |  0.04498291s 
 identitycard  |  264KB |     6336      |  0.00073242s
+
+
+read vs:
+
+read method |  Size  | Record Number| Load Time |Search Time
+------------|--------|--------------|-----------|------------
+Sqlite3	    | 16.2M  |	300105		| 0.0401926s|0.04498291s
+StreamReader| 16.2M  |	300105		| 1.906061s	|0.09459782s
